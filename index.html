@@ -18,8 +18,18 @@
      <body>
        <h1>JSON Chat Preview</h1>
        <br/>
-       <div id="preview"></div>
-       <textarea id="json"></textarea>
+       <div id="preview" class="preview-box"></div>
+       <br/>
+       <textarea id="json">{
+ "text": "Hello, ",
+ "color": "gold",
+ "extra": [
+   {
+    "text": "world",
+    "color": "red"
+   }
+ ]
+}</textarea>
        <br/>
        <button id="parse">Preview</button>
      </body>

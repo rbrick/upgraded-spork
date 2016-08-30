@@ -3,12 +3,8 @@
     src: url(../fonts/minecraftia/Minecraftia.ttf);
 }
 
-.text-container {
-    font-family: 'Minecraftia';
-}
-
 h1 {
-  font-family: 'Minecraftia';
+   text-shadow: 2px 2px 2px black;
 }
 
 * {
@@ -37,7 +33,20 @@ button {
 textarea {
   background-color: black;
   color: white;
-  width: 100%;
+  width: 98%;
   height: 350px;
   resize: none;
+
+  border-style: solid;
+  border-width: 3px;
+  border-color: lightblue;
+}
+
+.preview-box {
+  height: 30px;
+  background-color: black;
+  width: 98%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: lightblue;
 }

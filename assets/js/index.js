@@ -47,7 +47,7 @@ function render(json) {
       case "extra": {
         var extra = json[k];
         for (var i = 0; i < extra.length; i++) {
-          x += " " + render(extra[i]);
+          x += render(extra[i]);
         }
       }
       break;
@@ -57,7 +57,7 @@ function render(json) {
 }
 
 function getColor(query) {
-  var color = "black";
+  var color = "white";
   /* handle JSON chats */
   switch (query) {
     /* This handles chat color, pretty messy */
@@ -96,6 +96,9 @@ function getColor(query) {
     break;
     case "yellow":
         color = "yellow";
+    break;
+    case "white":
+        color = "white";
     break;
   }
 
