@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
+      <script src="assets/js/index.js"></script>
+      <script>
+      window.addEventListener('load', function(e) {
+        var parseButton = document.getElementById('parse');
+        parseButton.addEventListener('click', function(e) {
+          var previewDiv = document.getElementById('preview');
+          var json = document.getElementById('json');
+          var parsed = parseString(json.value);
+          previewDiv.innerHTML = parsed;
+        });
+      });
+      </script>
+    </head>
+     <body>
+       <h1>JSON Chat Preview</h1>
+       <br/>
+       <div id="preview"></div>
+       <textarea id="json"></textarea>
+       <br/>
+       <button id="parse">Preview</button>
+     </body>
+</html>
