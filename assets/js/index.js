@@ -88,6 +88,9 @@ function getColor(query) {
     case "red":
         color = "red";
     break;
+    case "blue":
+       color = "blue";
+    break;
     case "gray":
         color = "gray";
     break;
