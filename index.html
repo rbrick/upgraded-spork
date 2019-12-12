@@ -5,15 +5,21 @@
       <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
       <script src="assets/js/index.js"></script>
       <script>
-      window.addEventListener('load', function(e) {
-        var parseButton = document.getElementById('parse');
-        parseButton.addEventListener('click', function(e) {
-          var previewDiv = document.getElementById('preview');
-          var json = document.getElementById('json');
-          var parsed = parseString(json.value);
-          previewDiv.innerHTML = parsed;
+        window.addEventListener('load', event => {
+            var jsonTextArea = document.getElementById('json');
+
+            function updatePreview() {
+                var previewDiv = document.getElementById('preview');
+
+                var parsed = parseString(jsonTextArea.value);
+                previewDiv.innerHTML = parsed;
+            }
+
+            // make the preview update every time something changes
+            jsonTextArea.addEventListener('keyup', updatePreview);
+
+            updatePreview(); // initially update the preview
         });
-      });
       </script>
     </head>
      <body>
@@ -32,6 +38,5 @@
  ]
 }</textarea>
        <br/>
-       <button id="parse">Preview</button>
      </body>
 </html>
